@@ -15,7 +15,7 @@ RUN npx prisma generate
 RUN npm run build
 
 FROM packages AS app
-LABEL org.opencontainers.image.source="https://github.com/jetkvm/cloud-api"
+LABEL org.opencontainers.image.source="https://github.com/alexieff/cloud-api"
 WORKDIR /usr/src/app
 
 COPY --from=builder /usr/src/app/prisma /usr/src/app/prisma
